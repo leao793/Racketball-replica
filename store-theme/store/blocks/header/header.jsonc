@@ -1,0 +1,163 @@
+{
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#header-top",
+      "flex-layout.row#header-main"
+    ]
+  },
+
+  // 🔝 Barra superior
+  "flex-layout.row#header-top": {
+    "children": ["rich-text#header-message"],
+    "props": {
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "blockClass": "header-message"
+    }
+  },
+  "rich-text#header-message": {
+    "props": {
+      "text": "Envios gratis por compras superiores a $200.000. Aplica TYC",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "header-message"
+    }
+  },
+
+  // 🏗 Main Header
+  "flex-layout.row#header-main": {
+    "children": [
+      "flex-layout.col#header-left",
+      "flex-layout.col#header-center",
+      "flex-layout.col#header-right"
+    ],
+    "props": {
+      "fullWidth": true,
+      "verticalAlign": "middle",
+      "preventVerticalStretch": true,
+      "paddingTop": 6,
+      "paddingBottom": 6
+    }
+  },
+
+  // 🔗 Items del menú
+  "flex-layout.col#header-left": {
+    "props": { 
+      "width": "60%", 
+      "horizontalAlign": "left" },
+      "children": [
+      "vtex.menu@2.x:menu#websites"
+    ]
+  },
+  "vtex.menu@2.x:menu#websites": {
+    "children": [
+      "menu-item#new",
+      "menu-item#mujer",
+      "menu-item#hombre",
+      "menu-item#esenciales",
+      "menu-item#accesorios",
+      "menu-item#sale"
+    ]
+  },
+  "menu-item#new": {
+    "props": {
+      "id": "menu-item-new",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "text": "New"
+      }
+    }
+  },
+  "menu-item#mujer": {
+    "props": {
+      "id": "menu-item-mujer",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "text": "Mujer"
+      }
+    }
+  },
+  "menu-item#hombre": {
+    "props": {
+      "id": "menu-item-hombre",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "text": "Hombre"
+      }
+    }
+  },
+  "menu-item#esenciales": {
+    "props": {
+      "id": "menu-item-esenciales",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "text": "Esenciales"
+      }
+    }
+  },
+  "menu-item#accesorios": {
+    "props": {
+      "id": "menu-item-accesorios",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "text": "Accesorios"
+      }
+    }
+  },
+  "menu-item#sale": {
+    "props": {
+      "id": "menu-item-sale",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "text": "Sale"
+      }
+    }
+  },
+
+  // 🖼 Logo centrado
+  "flex-layout.col#header-center": {
+    "props": { "width": "40%", "horizontalAlign": "center" },
+    "children": ["logo#header"]
+  },
+  "logo#header": {
+    "props": {
+      "href": "/",
+      "url": "https://racketball.vteximg.com.br/arquivos/04-12-logo.png",
+      "title": "Racketball"
+    }
+  },
+
+  // 🔎 Acciones a la derecha
+  "flex-layout.col#header-right": {
+    "props": { "horizontalAlign": "right", "width": "60%" },
+    "children": [
+      "search-bar",
+      "login",
+      "minicart.v2"
+    ]
+  }
+}

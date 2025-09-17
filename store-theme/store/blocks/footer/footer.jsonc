@@ -1,0 +1,61 @@
+{
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#footer-main"
+    ]
+  },
+  "flex-layout.row#footer-main": {
+    "children": [
+      "flex-layout.col#footer-contact",
+      "flex-layout.col#footer-info",
+      "flex-layout.col#footer-account"
+    ],
+    "props": {
+      "paddingTop": 8,
+      "paddingBottom": 8
+    }
+  },
+
+
+  "flex-layout.col#footer-contact": {
+    "children": [
+      "rich-text#footer-title-contact",
+      "rich-text#footer-content-contact"
+    ]
+  },
+  "rich-text#footer-title-contact": {
+    "props": { "text": "**Contáctanos**" }
+  },
+  "rich-text#footer-content-contact": {
+    "props": { "text": "Teléfono: 300 123 4567\nEmail: ..." }
+  },
+
+
+  "flex-layout.col#footer-info": {
+    "children": [
+      "rich-text#footer-title-info",
+      "rich-text#footer-content-info"
+    ]
+  },
+  "rich-text#footer-title-info": {
+    "props": { "text": "**Contáctanos**" }
+  },
+  "rich-text#footer-content-info": {
+    "props": { "text": "Teléfono: 300 123 4567\nEmail: ..." }
+  },
+
+
+  "flex-layout.col#footer-account": {
+    "children": [
+      "rich-text#footer-title-account",
+      "rich-text#footer-content-account"
+    ]
+  },
+  "rich-text#footer-title-account": {
+    "props": { "text": "**Contáctanos**" }
+  },
+  "rich-text#footer-content-account": {
+    "props": { "text": "Teléfono: 300 123 4567\nEmail: ..." }
+  }
+
+}

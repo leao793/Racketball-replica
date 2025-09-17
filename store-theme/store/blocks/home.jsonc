@@ -1,0 +1,368 @@
+{
+  "store.home": {
+    "blocks": [
+      "header-layout.desktop",
+      "flex-layout.row#hero-with-banners", // hero
+      "rich-text#categories-title", // Título para la cuadrícula
+      "flex-layout.row#home-categories", // 2. Cuadrícula de Categorías
+      "list-context.product-list#demo1", // 3. Vitrina "Nuevos Productos"
+      "flex-layout.row#home-banner-1", // 4. Banner Intermedio
+      "rich-text#brands-title", // Título para las marcas
+      "flex-layout.row#home-brands", // 6. Cuadrícula de Marcas
+      "footer-layout.desktop"
+    ]
+  },
+
+// -----Hero-------
+
+ 
+"flex-layout.row#hero-with-banners": {
+    "children": [
+      "flex-layout.col#slider-col",
+      "flex-layout.col#banner-col"
+    ],
+    "props": {
+      "colGap": 2,
+      "rowGap": 0,
+      "marginBottom": 6,
+      "fullWidth": true
+    }
+  },
+
+  // Columna (Slider)
+  "flex-layout.col#slider-col": {
+    "children": ["slider-layout#hero"],
+    "props": {
+      "width": "75%" // Ajusta a tu gusto
+    }
+  },
+
+  // Columna banners
+  "flex-layout.col#banner-col": {
+    "children": [
+      "image#banner-for-her",
+      "image#banner-for-him"
+    ],
+    "props": {
+      "width": "25%",
+      "rowGap": 1
+    }
+  },
+
+  // ----- Slider principal -----
+  "slider-layout#hero": {
+    "props": {
+      "itemsPerPage": { "desktop": 1, "tablet": 1, "phone": 1 },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always"
+    },
+    "children": [
+      "image#hero1",
+      "image#hero2",
+      "image#hero3",
+      "image#hero4",
+      "image#hero5"
+    ]
+  },
+  "image#hero1": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/Origen_Web_Ago%202025-01.png",
+      "link": { "url": "/coleccion-origen" }
+    }
+  },
+  "image#hero2": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/agosto25-Origen_Web_Ago%202025-01.png",
+      "link": { "url": "/decoracion" }
+    }
+  },
+   "image#hero3": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/Origen_Web_Ago%202025-03.png",
+      "link": { "url": "/decoracion" }
+    }
+  },
+   "image#hero4": {
+    "props": {
+      "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/2d2551a5-bb37-4a4d-8956-7f30f63fce4f___29f7b6a7976ccc3118e3b9a6c895490d.png",
+      "link": { "url": "/decoracion" }
+    }
+  },
+   "image#hero5": {
+    "props": {
+      "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/be0f9ced-eb54-43a8-8e7b-263d6689a8a9___831b27bf0e3ad9a7767159cbf0536890.png",
+      "link": { "url": "/decoracion" }
+    }
+  },
+
+  // ----- Banners -----
+  "image#banner-for-her": {
+    "props": {
+      "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/dfb13644-08f9-4f7f-9526-1859f2b08841___7f35bb22c8030543744091089e301643.png",
+      "link": { "url": "/mujer" }
+    }
+  },
+  "image#banner-for-him": {
+    "props": {
+      "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/385bff6b-3a71-44ab-8e6f-6cb79278dcb5___76b7fa62eaeac0c7cee8b4ef6c3756b3.png",
+      "link": { "url": "/hombre" }
+    }
+  },
+
+
+// -----Tarjetas de Categorias-------
+
+"rich-text#categories-title": {
+  "props": {
+    "text": "## Tipo de deporte",
+    "textAlignment": "START",
+    "textPosition": "LEFT",
+    "blockClass": "categories-title"
+  }
+},
+
+// ----- Sección de Categorías -------
+"flex-layout.row#home-categories": {
+  "children": [
+    "flex-layout.col#category-padel",
+    "flex-layout.col#category-gym",
+    "flex-layout.col#category-running",
+    "flex-layout.col#category-outdoor"
+  ],
+  "props": {
+    "colGap": 4,
+    "rowGap": 6,
+    "marginBottom": 8
+  }
+},
+
+// ----- Card Pádel -----
+"flex-layout.col#category-padel": {
+  "children": [
+    "image#category-padel",
+    "rich-text#title-padel",
+    "rich-text#desc-padel",
+    "link#cta-padel"
+  ]
+},
+"image#category-padel": {
+  "props": {
+    "src": "https://testracket.vtexassets.com/arquivos/Paadel---Tenis-.jpg",
+    "link": { "url": "/padel-y-tenis" }
+  }
+},
+"rich-text#title-padel": {
+  "props": {
+    "text": "### Pádel - Tenis",
+    "textAlignment": "LEFT"
+  }
+},
+"rich-text#desc-padel": {
+  "props": {
+    "text": "Elasticidad multidireccional optimizando cada golpe para mayor rendimiento en cada juego.",
+    "textAlignment": "LEFT"
+  }
+},
+"link#cta-padel": {
+  "props": {
+    "href": "/padel-y-tenis",
+    "label": "Comprar ahora",
+    "size": "large",
+    "variant": "primary",
+    "blockClass": "category-button"
+  }
+},
+
+// ----- Card Gym -----
+"flex-layout.col#category-gym": {
+  "children": [
+    "image#category-gym",
+    "rich-text#title-gym",
+    "rich-text#desc-gym",
+    "link#cta-gym"
+  ]
+},
+"image#category-gym": {
+  "props": {
+    "src": "https://testracket.vtexassets.com/arquivos/GYM.jpg",
+    "link": { "url": "/training-gym" }
+  }
+},
+"rich-text#title-gym": {
+  "props": { "text": "### Training - Gym", "textAlignment": "CENTER" }
+},
+"rich-text#desc-gym": {
+  "props": { "text": "Tejidos con paneles de ventilación para mayor transpirabilidad y frescura.", "textAlignment": "LEFT" }
+},
+"link#cta-gym": {
+  "props": { 
+    "href": "/training-gym", 
+    "label": "Comprar ahora", 
+    "size": "large", 
+    "variant": "primary",
+    "blockClass": "category-button" 
+  }
+},
+
+// ----- Card Running -----
+"flex-layout.col#category-running": {
+  "children": [
+    "image#category-running",
+    "rich-text#title-running",
+    "rich-text#desc-running",
+    "link#cta-running"
+  ]
+},
+"image#category-running": {
+  "props": {
+    "src": "https://testracket.vtexassets.com/arquivos/Running.jpg",
+    "link": { "url": "/running" }
+  }
+},
+"rich-text#title-running": {
+  "props": { "text": "### Running", "textAlignment": "CENTER" }
+},
+"rich-text#desc-running": {
+  "props": { "text": "Ultraligeras con tecnología de secado rápido y costuras planas que minimizan la fricción.", "textAlignment": "LEFT" }
+},
+"link#cta-running": {
+  "props": { 
+    "href": "/running", 
+    "label": "Comprar ahora", 
+    "size": "large", 
+    "variant": "primary",
+    "blockClass": "category-button" 
+  }
+},
+
+// ----- Card Outdoor -----
+"flex-layout.col#category-outdoor": {
+  "children": [
+    "image#category-outdoor",
+    "rich-text#title-outdoor",
+    "rich-text#desc-outdoor",
+    "link#cta-outdoor"
+  ]
+},
+"image#category-outdoor": {
+  "props": {
+    "src": "https://testracket.vtexassets.com/arquivos/OutWear.jpg",
+    "link": { "url": "/outdoor" }
+  }
+},
+"rich-text#title-outdoor": {
+  "props": { "text": "### Performance Outdoor", "textAlignment": "CENTER" }
+},
+"rich-text#desc-outdoor": {
+  "props": { "text": "Tecnología de filtro UV integrado en el tejido, bloqueando la radiación de altas temperaturas.", "textAlignment": "LEFT" }
+},
+"link#cta-outdoor": {
+  "props": { 
+    "href": "/outdoor", 
+    "label": "Comprar ahora", 
+    "size": "large", 
+    "variant": "primary",
+    "blockClass": "category-button"
+   }
+},
+
+  // -----Vitrina productos-------{
+
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf#demo1"],
+    "children": ["slider-layout#demo-products"]
+
+  },
+
+    "product-summary.shelf#demo1": {
+     "children": [
+      "product-summary-name",
+      "product-summary-description",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
+    ]
+  },
+
+"slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  // -----Banner-------
+
+  "flex-layout.row#home-banner-1": {
+    "children": ["image#promo-banner"],
+    "props": { "paddingTop": 8, "paddingBottom": 8 }
+  },
+  "image#promo-banner": {
+    "props": {
+      "src": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-desktop.png",
+      "link": { "url": "/accesorios/cuerdas" }
+    }
+  },
+
+  // -----Marcas-------
+
+  "rich-text#brands-title": {
+    "props": {
+      "text": "## Nuestras Marcas",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#home-brands": {
+    "children": [
+      "image#brand-babolat",
+      "image#brand-wilson",
+      "image#brand-head",
+      "image#brand-yonex"
+    ],
+    "props": {
+      "colGap": 3,
+      "horizontalAlign": "center",
+      "paddingBottom": 8
+    }
+  },
+  "image#brand-babolat": {
+    "props": {
+      "src": "https://racketball.com.co/arquivos/MARCA-BABOLAT.png",
+      "link": { "url": "/babolat" },
+      "maxWidth": 150
+    }
+  },
+  "image#brand-wilson": {
+    "props": {
+      "src": "https://racketball.com.co/arquivos/MARCA-BABOLAT.png",
+      "link": { "url": "/babolat" },
+      "maxWidth": 150
+    }
+  },
+  "image#brand-head": {
+    "props": {
+      "src": "https://racketball.com.co/arquivos/MARCA-BABOLAT.png",
+      "link": { "url": "/babolat" },
+      "maxWidth": 150
+    }
+  },
+  "image#brand-yonex": {
+    "props": {
+      "src": "https://racketball.com.co/arquivos/MARCA-BABOLAT.png",
+      "link": { "url": "/babolat" },
+      "maxWidth": 150
+    }
+  }
+  
+}
+
+
