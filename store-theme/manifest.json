@@ -7,9 +7,13 @@
   "builders": {
     "styles": "2.x",
     "store": "0.x",
+    "react": "3.x",
     "assets": "0.x",
     "messages": "1.x"
   },
+  "registries": [
+    "store"
+  ],
   "dependencies": {
     "vtex.store": "2.x",
     "vtex.store-header": "2.x",
@@ -60,11 +64,8 @@
     "vtex.product-specifications": "1.x",
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
-    "vtex.css-handles": "1.x"
+    "vtex.css-handles": "0.x"
   },
-  "registries": [
-    "smartcheckout"
-  ],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
   "i18n": {

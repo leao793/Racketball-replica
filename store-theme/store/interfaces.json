@@ -1,0 +1,18 @@
+{
+  "image-gallery": {
+    "component": "ImageGallery",
+    "props": {
+      "images": {
+        "title": "Images",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "src": { "type": "string" },
+            "alt": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

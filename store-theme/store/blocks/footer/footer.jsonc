@@ -1,22 +1,46 @@
 {
   "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer-main"
+      "flex-layout.row#footer-main",
+      "flex-layout.row#logos-footer"
     ]
   },
+
   "flex-layout.row#footer-main": {
     "children": [
+      "flex-layout.col#footer-about",
       "flex-layout.col#footer-contact",
-      "flex-layout.col#footer-info",
-      "flex-layout.col#footer-account"
+      "flex-layout.col#footer-help",
+      "flex-layout.col#footer-stores",
+      "flex-layout.col#footer-social"
     ],
     "props": {
       "paddingTop": 8,
-      "paddingBottom": 8
+      "paddingBottom": 8,
+      "blockClass": "footer-datos",
+      "fullWidth": true
     }
   },
 
+  // ### 1. Acerca de Nosotros ###
+  "flex-layout.col#footer-about": {
+    "children": [
+      "rich-text#footer-title-about",
+      "rich-text#footer-content-about"
+    ]
+  },
+  "rich-text#footer-title-about": {
+    "props": {
+      "text": "**Acerca de nosotros**"
+    }
+  },
+  "rich-text#footer-content-about": {
+    "props": {
+      "text": "- Quiénes somos\n- Términos de Condiciones de Envío\n- Términos y Condiciones\n- Cambios y Garantías\n- Políticas de datos"
+    }
+  },
 
+  // ### 2. Contáctanos ###
   "flex-layout.col#footer-contact": {
     "children": [
       "rich-text#footer-title-contact",
@@ -24,38 +48,97 @@
     ]
   },
   "rich-text#footer-title-contact": {
-    "props": { "text": "**Contáctanos**" }
+    "props": {
+      "text": "**Contáctanos**"
+    }
   },
   "rich-text#footer-content-contact": {
-    "props": { "text": "Teléfono: 300 123 4567\nEmail: ..." }
+    "props": {
+      "text": "Email: contacto@racketball.co\nWhatsapp: (+57) 313-547-85-78\nTel: (604) 444-52-44 Ext 137\nChat: Lunes a viernes 8am - 5pm\nSábado 8am - 11am"
+    }
   },
 
-
-  "flex-layout.col#footer-info": {
+  // ### 3. Te ayudamos ###
+  "flex-layout.col#footer-help": {
     "children": [
-      "rich-text#footer-title-info",
-      "rich-text#footer-content-info"
+      "rich-text#footer-title-help",
+      "rich-text#footer-content-help"
     ]
   },
-  "rich-text#footer-title-info": {
-    "props": { "text": "**Contáctanos**" }
+  "rich-text#footer-title-help": {
+    "props": {
+      "text": "**Te ayudamos**"
+    }
   },
-  "rich-text#footer-content-info": {
-    "props": { "text": "Teléfono: 300 123 4567\nEmail: ..." }
+  "rich-text#footer-content-help": {
+    "props": {
+      "text": "- ¿Dónde está mi pedido?\n- Guía de tallas\n- PQRS"
+    }
   },
 
-
-  "flex-layout.col#footer-account": {
+  // ### 4. Conoce nuestras tiendas ###
+  "flex-layout.col#footer-stores": {
     "children": [
-      "rich-text#footer-title-account",
-      "rich-text#footer-content-account"
+      "rich-text#footer-title-stores",
+      "icon#footer-icon-location"
     ]
   },
-  "rich-text#footer-title-account": {
-    "props": { "text": "**Contáctanos**" }
+  "rich-text#footer-title-stores": {
+    "props": {
+      "text": "**Conoce nuestras tiendas:**"
+    }
   },
-  "rich-text#footer-content-account": {
-    "props": { "text": "Teléfono: 300 123 4567\nEmail: ..." }
+  "icon#footer-icon-location": {
+    "props": {
+      "id": "hpa-location",
+      "size": 24,
+      "color": "black"
+    }
+  },
+
+  // ### 5. Síguenos en ###
+  "flex-layout.col#footer-social": {
+    "children": [
+      "rich-text#footer-title-social",
+      "social-networks#footer-social-icons"
+    ]
+  },
+  "rich-text#footer-title-social": {
+    "props": {
+      "text": "**Síguenos en:**"
+    }
+  },
+  "social-networks#footer-social-icons": {
+    "props": {
+      "socialNetworks": ["facebook", "instagram", "youtube"],
+      "alignment": "left"
+    }
+  },
+
+  // Barra logos footer
+
+"flex-layout.row#logos-footer": {
+    "children": [
+      "image#logos-f"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "footer-logos",
+      "horizontalAlign": "center",
+      "paddingBottom": 2,
+      "paddingTop": 2
+    }
+  },
+
+  "image#logos-f": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/mediosPagos-footer.png",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
   }
 
 }
+
+
+

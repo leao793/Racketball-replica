@@ -1,0 +1,19 @@
+
+.flexCol--header-buttons {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.flexRowContent--footer-datos {
+  background: #e5e4e7;
+  padding: 25px 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.flexRowContent--footer-logos {
+    background: #383838;
+    padding: 10px 0;
+}
