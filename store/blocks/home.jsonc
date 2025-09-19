@@ -1,15 +1,12 @@
 {
   "store.home": {
     "blocks": [
-      "header-layout.desktop",
       "flex-layout.row#hero-with-banners", // hero
-      "rich-text#categories-title", // Título para la cuadrícula
+      "flex-layout.row#home-title-categories", // Título para la cuadrícula
       "flex-layout.row#home-categories", // Cuadrícula de Categorías
-      "rich-text#esenciales-title", // Título para esenciales
-      "list-context.product-list#esenciales", // Vitrina "esenciales"
-      "rich-text#nuevacolección-title", // Título para nuevos productos
-      "list-context.product-list#nuevos", // Vitrina "nuevos productos"
-      "image-gallery#home", //componente REACT galeria
+      "flex-layout.row#home-title-tags", // Título para los tabs
+      "tabs-custom#clothing-technology", //componente REACT tabs
+      "store.product", // Vitrinas productos
       "footer-layout.desktop"
     ]
   },
@@ -113,6 +110,15 @@
 
 // -----Tarjetas de Categorias-------
 
+"flex-layout.row#home-title-categories": {
+  "children": [
+    "rich-text#categories-title"
+  ],
+  "props": {
+    "fullWidth": false
+  }
+},
+
 "rich-text#categories-title": {
   "props": {
     "text": "## Tipo de deporte",
@@ -145,29 +151,33 @@
     "rich-text#title-padel",
     "rich-text#desc-padel",
     "link#cta-padel"
-  ]
+  ],
+  "props": {
+    "blockClass":"col-cards"
+  }
 },
 "image#category-padel": {
   "props": {
-    "src": "https://testracket.vtexassets.com/arquivos/Paadel---Tenis-.jpg",
-    "link": { "url": "/padel-y-tenis" }
+    "src": "https://testracket.vtexassets.com/arquivos/Paadel---Tenis-.jpg"
   }
 },
 "rich-text#title-padel": {
   "props": {
     "text": "### Pádel - Tenis",
-    "textAlignment": "LEFT"
+    "textAlignment": "LEFT",
+    "blockClass": "cards-title"
   }
 },
 "rich-text#desc-padel": {
   "props": {
     "text": "Elasticidad multidireccional optimizando cada golpe para mayor rendimiento en cada juego.",
-    "textAlignment": "LEFT"
+    "textAlignment": "LEFT",
+    "blockClass": "cards-paragraf"
   }
 },
 "link#cta-padel": {
   "props": {
-    "href": "/padel-y-tenis",
+    "href": "/",
     "label": "Comprar ahora",
     "size": "large",
     "variant": "primary",
@@ -182,23 +192,28 @@
     "rich-text#title-gym",
     "rich-text#desc-gym",
     "link#cta-gym"
-  ]
+  ],
+  "props": {
+    "blockClass":"col-cards"
+  }
 },
 "image#category-gym": {
   "props": {
-    "src": "https://testracket.vtexassets.com/arquivos/GYM.jpg",
-    "link": { "url": "/training-gym" }
+    "src": "https://testracket.vtexassets.com/arquivos/GYM.jpg"
   }
 },
 "rich-text#title-gym": {
-  "props": { "text": "### Training - Gym", "textAlignment": "CENTER" }
+  "props": { "text": "### Training - Gym", "textAlignment": "CENTER", "blockClass": "cards-title" }
 },
 "rich-text#desc-gym": {
-  "props": { "text": "Tejidos con paneles de ventilación para mayor transpirabilidad y frescura.", "textAlignment": "LEFT" }
+  "props": { "text": "Tejidos con paneles de ventilación para mayor transpirabilidad y frescura.",
+  "textAlignment": "LEFT",
+  "blockClass": "cards-paragraf"
+  }
 },
 "link#cta-gym": {
   "props": { 
-    "href": "/training-gym", 
+    "href": "/", 
     "label": "Comprar ahora", 
     "size": "large", 
     "variant": "primary",
@@ -213,23 +228,25 @@
     "rich-text#title-running",
     "rich-text#desc-running",
     "link#cta-running"
-  ]
+  ],
+  "props": {
+    "blockClass":"col-cards"
+  }
 },
 "image#category-running": {
   "props": {
-    "src": "https://testracket.vtexassets.com/arquivos/Running.jpg",
-    "link": { "url": "/running" }
+    "src": "https://testracket.vtexassets.com/arquivos/Running.jpg"
   }
 },
 "rich-text#title-running": {
-  "props": { "text": "### Running", "textAlignment": "CENTER" }
+  "props": { "text": "### Running", "textAlignment": "CENTER", "blockClass": "cards-title" }
 },
 "rich-text#desc-running": {
-  "props": { "text": "Ultraligeras con tecnología de secado rápido y costuras planas que minimizan la fricción.", "textAlignment": "LEFT" }
+  "props": { "text": "Ultraligeras con tecnología de secado rápido y costuras planas que minimizan la fricción.", "textAlignment": "LEFT","blockClass": "cards-paragraf" }
 },
 "link#cta-running": {
   "props": { 
-    "href": "/running", 
+    "href": "/", 
     "label": "Comprar ahora", 
     "size": "large", 
     "variant": "primary",
@@ -244,23 +261,26 @@
     "rich-text#title-outdoor",
     "rich-text#desc-outdoor",
     "link#cta-outdoor"
-  ]
+  ],
+  "props": {
+    "blockClass":"col-cards"
+  }
 },
 "image#category-outdoor": {
   "props": {
     "src": "https://testracket.vtexassets.com/arquivos/OutWear.jpg",
-    "link": { "url": "/outdoor" }
+     "maxHeight": 370
   }
 },
 "rich-text#title-outdoor": {
-  "props": { "text": "### Performance Outdoor", "textAlignment": "CENTER" }
+  "props": { "text": "### Performance Outdoor", "textAlignment": "CENTER", "blockClass": "cards-title" }
 },
 "rich-text#desc-outdoor": {
-  "props": { "text": "Tecnología de filtro UV integrado en el tejido, bloqueando la radiación de altas temperaturas.", "textAlignment": "LEFT" }
+  "props": { "text": "Tecnología de filtro UV integrado en el tejido, bloqueando la radiación de altas temperaturas.", "textAlignment": "LEFT","blockClass": "cards-paragraf" }
 },
 "link#cta-outdoor": {
   "props": { 
-    "href": "/outdoor", 
+    "href": "/", 
     "label": "Comprar ahora", 
     "size": "large", 
     "variant": "primary",
@@ -268,106 +288,75 @@
    }
 },
 
-// -----Vitrina productos Esenciales-------{
+// -----Componenete REACT Tabs-------{
 
-"rich-text#esenciales-title": {
+"flex-layout.row#home-title-tags": {
+  "children": [
+    "rich-text#tags-title"
+  ],
   "props": {
-    "text": "## Esenciales",
-    "textAlignment": "LEFT",
-    "textPosition": "LEFT",
     "fullWidth": false
   }
 },
 
-"list-context.product-list#esenciales": {
-    "blocks": ["product-summary.shelf#demo1"],
-    "children": ["slider-layout#demo-products"],
-    "props": {
-      "collection": "146",
-      "orderBy": "OrderByNameDESC",
-      "fullWidth": false
-    }
-
-  },
-
-    "product-summary.shelf#demo1": {
-     "children": [
-      "product-summary-image",
-      "product-summary-name",
-      "product-summary-price"
-    ]
-  },
-
- "slider-layout#demo-products": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 5,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "showNavigationArrows": "desktopOnly"
-    }
-  },
-
-
-// -----Vitrina productos Nueva Colección-------{
-
-"rich-text#nuevacolección-title": {
+"rich-text#tags-title": {
   "props": {
-    "text": "## Nueva Colección",
+    "text": "## Tecnología de prendas",
     "textAlignment": "LEFT",
     "textPosition": "LEFT",
-    "fullWidth": false
+    "blockClass": "categories-title"
   }
 },
 
-  "list-context.product-list#nuevos": {
-    "blocks": ["product-summary.shelf#demo2"],
-    "children": ["slider-layout#demo-products"],
+"tabs-custom#clothing-technology": {
     "props": {
-      "collection": "146",
-      "orderBy": "OrderByNameDESC",
-      "fullWidth": true
+      "tabs": [
+        {
+          "id": "proteccion-uv",
+          "label": "Protección UV",
+          "content": "image#uv-protection-content"
+        },
+        {
+          "id": "antibacterial",
+          "label": "Antibacterial",
+          "content": "rich-text#antibacterial-content"
+        },
+        {
+          "id": "secado",
+          "label": "Secado Rápido",
+          "content": "rich-text#antibacterial-content"
+        },
+        {
+          "id": "soporte",
+          "label": "Tipos de soporte",
+          "content": "rich-text#antibacterial-content"
+        },
+        {
+          "id": "entrepierna",
+          "label": "Tipos de entrepierna",
+          "content": "rich-text#antibacterial-content"
+        },
+        {
+          "id": "largos",
+          "label": "Tipos de largos",
+          "content": "rich-text#antibacterial-content"
+        }
+      ]
     }
-
   },
 
-    "product-summary.shelf#demo2": {
-     "children": [
-      "product-summary-image",
-      "product-summary-name",
-      "product-summary-price"
-    ]
-  },
-
- "slider-layout#demo-products2": {
+  "image#uv-protection-content": {
     "props": {
-      "itemsPerPage": {
-        "desktop": 5,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "showNavigationArrows": "desktopOnly"
+      "src": "https://testracket.vtexassets.com/arquivos/OutWear.jpg"
     }
   },
 
-// -----Componenete REACT galeria-------{
-
-"image-gallery#home": {
-  "props": {
-    "images": [
-      { "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/e964bdaa-9583-4c3e-8c77-5b5c91efb6f0___f7472ea670b1459ca83aa02499992ccb.png", "alt": "Desayuno" },
-      { "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/b3d7b6d7-2216-492a-aa77-a80bdcc48a6d___427e131b2ac97867c5c4dcba84a3582a.png", "alt": "Hamburguesa" },
-      { "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/102fcdc1-819e-46a5-8a71-2b0846cab9a3___ea261d0570f51213ad46e2a19bb49039.png", "alt": "Radio vintage" },
-      { "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/a1b661e7-727f-43df-9b12-70725217e8d9___0ce31c42e7701f79d4f291871168e12b.png", "alt": "Café" },
-      { "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/9770c074-8ac0-45c0-ad01-d3a59fdb345a___ac988177d738a2fedb44c329da674091.png", "alt": "Sombreros" },
-      { "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/328d0ff7-7ed9-4dab-b85f-78d78420f998___7205efbadef8fde9f8ee98f81c298c52.png", "alt": "Miel" }
-    ],
-    "fullWidth": false
+  "rich-text#antibacterial-content": {
+    "props": {
+      "text": "Contenido de la pestaña de Antibacterial"
+    }
   }
-}
+
 
 }
 

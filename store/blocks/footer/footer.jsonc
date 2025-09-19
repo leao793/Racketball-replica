@@ -1,0 +1,176 @@
+{
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#footer-main",
+      "flex-layout.row#logos-footer"
+    ]
+  },
+
+  "flex-layout.row#footer-main": {
+    "children": [
+      "flex-layout.col#footer-about",
+      "flex-layout.col#footer-contact",
+      "flex-layout.col#footer-help",
+      "flex-layout.col#footer-stores",
+      "flex-layout.col#footer-social"
+    ],
+    "props": {
+      "paddingTop": 8,
+      "paddingBottom": 8,
+      "blockClass": "footer-datos",
+      "fullWidth": true
+    }
+  },
+
+  // ###Acerca de Nosotros ###
+  "flex-layout.col#footer-about": {
+    "children": [
+      "rich-text#footer-title-about",
+      "rich-text#footer-content-about"
+    ]
+  },
+  "rich-text#footer-title-about": {
+    "props": {
+      "text": "**Acerca de nosotros**"
+    }
+  },
+  "rich-text#footer-content-about": {
+    "props": {
+      "text": "Quiénes somos\nTérminos de Condiciones de Envío\n Términos y Condiciones\nCambios y Garantías\nPolíticas de datos",
+      "blockClass": "f-d-text"
+    }
+  },
+
+  // ###Contáctanos ###
+  "flex-layout.col#footer-contact": {
+    "children": [
+      "rich-text#footer-title-contact",
+      "rich-text#footer-content-contact"
+    ]
+  },
+  "rich-text#footer-title-contact": {
+    "props": {
+      "text": "**Contáctanos**"
+    }
+  },
+  "rich-text#footer-content-contact": {
+    "props": {
+      "text": "Email: contacto@racketball.co\nWhatsapp: (+57) 313-547-85-78\nTel: (604) 444-52-44 Ext 137\nChat: Lunes a viernes 8am - 5pm Sábado 8am - 11am",
+      "test": "Email: contacto@racketball.co\nWhatsapp: (+57) 313-547-85-78\nTel: (604) 444-52-44 Ext 137\nChat: Lunes a viernes 8am - 5pm Sábado 8am - 11am"
+      
+    }
+  },
+
+  // ###Te ayudamos ###
+  "flex-layout.col#footer-help": {
+    "children": [
+      "rich-text#footer-title-help",
+      "rich-text#footer-content-help"
+    ]
+  },
+  "rich-text#footer-title-help": {
+    "props": {
+      "text": "**Te ayudamos**"
+      
+    }
+  },
+  "rich-text#footer-content-help": {
+    "props": {
+      "text": "¿Dónde está mi pedido?\n\n Guía de tallas\n\n PQRS"
+    }
+  },
+
+  // ###Conoce nuestras tiendas ###
+  "flex-layout.col#footer-stores": {
+    "children": [
+      "rich-text#footer-title-stores",
+      "image#ubi"
+    ]
+  },
+  "rich-text#footer-title-stores": {
+    "props": {
+      "text": "**Conoce nuestras tiendas:**"
+    }
+  },
+  "image#ubi": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/ubicacionTiendas-1.png",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "maxWidth": 40
+    }
+  },
+
+  // ###Síguenos en ###
+
+"flex-layout.col#footer-social": {
+  "children": [
+    "rich-text#footer-title-social",
+    "flex-layout.row#footer-social-icons"
+  ]
+},
+"rich-text#footer-title-social": {
+  "props": {
+    "text": "**Síguenos en:**"
+  }
+},
+"flex-layout.row#footer-social-icons": {
+  "children": [
+    "image#facebook",
+    "image#instagram",
+    "image#youtube"
+  ],
+  "props": {
+    "colGap": 3
+  }
+},
+"image#facebook": {
+  "props": {
+    "src": "https://racketball.vtexassets.com/_v/public/assets/v1/published/vtex.store-footer@2.27.0/public/react/ebd4bd10e66138168eb6a582e00790ea.svg",
+    "link": { "url": "https://www.facebook.com/racketballoficial/" },
+    "maxWidth": 40
+  }
+},
+"image#instagram": {
+  "props": {
+    "src": "https://racketball.vtexassets.com/_v/public/assets/v1/published/vtex.store-footer@2.27.0/public/react/6a61a302319c062aceb9562a66381a63.svg",
+    "link": { "url": "https://www.instagram.com/racketballoficial/?hl=es-la" },
+    "maxWidth": 40
+  }
+},
+"image#youtube": {
+  "props": {
+    "src": "https://racketball.vtexassets.com/_v/public/assets/v1/published/vtex.store-footer@2.27.0/public/react/20a214b4866fd6d42a6dfed070c0057b.svg",
+    "link": { "url": "https://www.youtube.com/channel/UCtzuk2G2-mv-P2NajQ2tsoA" },
+    "maxWidth": 40
+  }
+},
+
+  // Barra logos footer
+
+"flex-layout.row#logos-footer": {
+    "children": [
+      "image#logos-f"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "footer-logos",
+      "horizontalAlign": "center",
+      "paddingBottom": 2,
+      "paddingTop": 2
+    }
+  },
+
+  "image#logos-f": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/mediosPagos-footer.png",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "sizes": "fullWidth"
+    }
+  }
+
+}
+
+
+

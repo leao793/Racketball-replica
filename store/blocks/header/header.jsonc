@@ -1,0 +1,113 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  // header versiones
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  // header desktop 
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#1-desktop",
+      "sticky-layout#4-desktop"
+    ],
+    "props": {
+      "fullWidth": true,
+      "verticalAlign": "middle",
+      "preventVerticalStretch": true,
+      "paddingTop": 1,
+      "paddingBottom": 3,
+      "blockClass": "header-main"
+    }
+  },
+
+  // bloque fixed del header
+  "sticky-layout#4-desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#4-desktop"]
+  },
+
+  // header bloque
+  "flex-layout.row#4-desktop": {
+    "props": {
+      "fullWidth": true,
+      "verticalAlign": "middle",
+      "preventVerticalStretch": true,
+      "paddingTop": 1,
+      "paddingBottom": 3,
+      "blockClass": "header-main"
+    },
+    "children": [
+      "flex-layout.col#category-menu",
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#header-right"
+    ]
+  },
+
+  // menu 
+  "flex-layout.col#category-menu": {
+    "props": { "width": "60%", "horizontalAlign": "left" },
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+
+  // logo
+  "flex-layout.col#logo-desktop": {
+    "props": { "width": "20%", "horizontalAlign": "center" },
+    "children": ["logo#desktop"]
+  },
+
+  "logo#desktop": {
+    "props": {
+      "href": "/",
+      "url": "https://racketball.vteximg.com.br/arquivos/04-12-logo.png",
+      "title": "Racketball"
+    }
+  },
+
+  // Desktop - Íconos
+  "flex-layout.col#header-right": {
+    "props": { "horizontalAlign": "right", "width": "60%", "blockClass": "header-buttons" },
+    "children": [
+      "image#search",
+      "image#login",
+      "image#location",
+      "image#cart"
+    ]
+  },
+  "image#search": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/iconos_new_buscador_new.png",
+      "link": { "url": "#" },
+      "maxWidth": 35,
+      "blockClass": "icon-h"
+    }
+  },
+  "image#login": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/iconos_usuarios_header_new.png",
+      "link": { "url": "#" },
+      "maxWidth": 35,
+      "blockClass": "icon-h"
+    }
+  },
+  "image#location": {
+    "props": {
+      "src": "https://racketball.vteximg.com.br/arquivos/ubicacionTiendas-1.png",
+      "link": { "url": "#" },
+      "maxWidth": 32,
+      "blockClass": "icon-h"
+    }
+  },
+  "image#cart": {
+    "props": {
+      "src": "https://epartner.vtexassets.com/assets/vtex.file-manager-graphql/images/93693429-3585-4377-8855-8977d95d9cc2___2ea446834d0fe74fede8f225a1db921d.png",
+      "link": { "url": "#" },
+      "maxWidth": 32,
+      "blockClass": "icon-h"
+    }
+  }
+}

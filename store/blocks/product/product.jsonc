@@ -1,0 +1,115 @@
+{
+  "store.product": {
+    "children": [
+      "flex-layout.row#esenciales-title-cont",
+      "list-context.product-list#esenciales",
+      "flex-layout.row#nuevacolección-title-cont",
+      "list-context.product-list#nuevos"
+    ]
+  },
+
+  // -----Vitrina productos Esenciales-------{
+
+"flex-layout.row#esenciales-title-cont": {
+  "children": [
+    "rich-text#esenciales-title"
+  ],
+  "props": {
+    "fullWidth": false
+  }
+},
+
+"rich-text#esenciales-title": {
+  "props": {
+    "text": "## Esenciales",
+    "textAlignment": "LEFT",
+    "textPosition": "LEFT",
+    "fullWidth": false
+  }
+},
+
+"list-context.product-list#esenciales": {
+    "blocks": ["product-summary.shelf#demo1"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "collection": "146",
+      "orderBy": "OrderByNameDESC",
+      "fullWidth": false,
+      "hideUnavailableItems": true
+    }
+
+  },
+
+    "product-summary.shelf#demo1": {
+     "children": [
+      "product-summary-image",
+      "product-summary-name",
+      "product-summary-price"
+    ]
+  },
+
+ "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never"
+    }
+  },
+
+
+// -----Vitrina productos Nueva Colección-------{
+
+"flex-layout.row#nuevacolección-title-cont": {
+  "children": [
+    "rich-text#nuevacolección-title"
+  ],
+  "props": {
+    "fullWidth": false
+  }
+},
+
+"rich-text#nuevacolección-title": {
+  "props": {
+    "text": "## Nueva Colección",
+    "textAlignment": "LEFT",
+    "textPosition": "LEFT",
+    "fullWidth": false
+  }
+},
+
+  "list-context.product-list#nuevos": {
+    "blocks": ["product-summary.shelf#demo2"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "collection": "146",
+      "orderBy": "OrderByTopSaleDESC",
+      "fullWidth": true
+    }
+
+  },
+
+    "product-summary.shelf#demo2": {
+     "children": [
+      "product-summary-image",
+      "product-summary-name",
+      "product-summary-price"
+    ]
+  },
+
+ "slider-layout#demo-products2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly"
+    }
+  }
+}

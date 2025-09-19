@@ -1,0 +1,19 @@
+{
+  "tabs-custom": {
+    "component": "Tabs",
+    "props": {
+      "tabs": {
+        "title": "Tabs",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "label": { "type": "string" },
+            "content": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

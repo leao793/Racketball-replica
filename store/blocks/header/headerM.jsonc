@@ -1,0 +1,65 @@
+{
+    // header mobile
+    "header-layout.mobile": {
+        "children": ["sticky-layout#1-mobile"]
+    },
+
+    // fixed mobile
+    "sticky-layout#1-mobile": {
+        "children": ["flex-layout.row#1-mobile"]
+    },
+
+    // bloque del menu
+    "flex-layout.row#1-mobile": {
+        "children": [
+          "drawer#menuMobile",
+          "logo#mobile"
+        ],
+        "props": {
+          "blockClass": "main-header-mobile",
+          "preventHorizontalStretch": true,
+          "preserveLayoutOnMobile": true,
+          "fullWidth": true
+        }
+    },
+    "drawer#menuMobile": {
+        "children": ["menu#drawer"]
+    },
+    
+    "menu#drawer": {
+        "children": [
+          "menu-item#new",
+      "menu-item#mujer",
+      "menu-item#hombre",
+      "menu-item#esenciales",
+      "menu-item#accesorios",
+      "menu-item#sale",
+      "flex-layout.col#icons-mobile"
+        ],
+        "props": {
+          "orientation": "vertical"
+        }
+    },
+    
+    // logo para mobile
+    "logo#mobile": {
+        "props": {
+          "title": "Logo",
+          "href": "/",
+          "url": "https://racketball.vteximg.com.br/arquivos/04-12-logo.png",
+          "width": "80%", 
+          "horizontalAlign": "center"
+        }
+    },
+
+    // Mobile - Íconos
+  "flex-layout.col#icons-mobile": {
+    "props": { "width": "20%", "horizontalAlign": "right", "blockClass": "header-buttons" },
+    "children": [
+      "image#search",
+      "image#login",
+      "image#location",
+      "image#cart"
+    ]
+  }
+}
