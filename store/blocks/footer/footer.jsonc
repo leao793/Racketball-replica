@@ -22,7 +22,7 @@
     }
   },
 
-  // ###Acerca de Nosotros ###
+  // Acerca de Nosotros 
   "flex-layout.col#footer-about": {
     "children": [
       "rich-text#footer-title-about",
@@ -40,8 +40,7 @@
       "blockClass": "f-d-text"
     }
   },
-
-  // ###Contáctanos ###
+  // Contáctanos 
   "flex-layout.col#footer-contact": {
     "children": [
       "rich-text#footer-title-contact",
@@ -61,7 +60,7 @@
     }
   },
 
-  // ###Te ayudamos ###
+  // Te ayudamos 
   "flex-layout.col#footer-help": {
     "children": [
       "rich-text#footer-title-help",
@@ -80,7 +79,7 @@
     }
   },
 
-  // ###Conoce nuestras tiendas ###
+  // Conoce nuestras tiendas 
   "flex-layout.col#footer-stores": {
     "children": [
       "rich-text#footer-title-stores",
@@ -101,7 +100,7 @@
     }
   },
 
-  // ###Síguenos en ###
+  // Síguenos en 
 
 "flex-layout.col#footer-social": {
   "children": [

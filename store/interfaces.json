@@ -1,16 +1,22 @@
 {
-  "tabs-custom": {
-    "component": "Tabs",
+  "gallery": {
+    "component": "Gallery",
     "props": {
-      "tabs": {
-        "title": "Tabs",
+      "images": {
         "type": "array",
+        "title": "Imágenes de la galería",
         "items": {
           "type": "object",
+          "title": "Imagen",
           "properties": {
-            "id": { "type": "string" },
-            "label": { "type": "string" },
-            "content": { "type": "string" }
+            "src": {
+              "type": "string",
+              "title": "URL de la imagen"
+            },
+            "alt": {
+              "type": "string",
+              "title": "Texto alternativo"
+            }
           }
         }
       }

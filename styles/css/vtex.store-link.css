@@ -2,7 +2,7 @@
 .label--category-button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #003366;
+  background-color: #0f3e99;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -12,5 +12,5 @@
 }
 
 .label--category-button:hover {
-  background-color: #001a33;
+  background-color: #3f3f40;
 }

@@ -5,8 +5,9 @@
       "flex-layout.row#home-title-categories", // Título para la cuadrícula
       "flex-layout.row#home-categories", // Cuadrícula de Categorías
       "flex-layout.row#home-title-tags", // Título para los tabs
-      "tabs-custom#clothing-technology", //componente REACT tabs
+      "flex-layout.row#row-tabs", // Tabs
       "store.product", // Vitrinas productos
+      "flex-layout.row#gallery-row", //componente REACT tabs
       "footer-layout.desktop"
     ]
   },
@@ -288,7 +289,7 @@
    }
 },
 
-// -----Componenete REACT Tabs-------{
+// -----Tabs-------{
 
 "flex-layout.row#home-title-tags": {
   "children": [
@@ -308,52 +309,229 @@
   }
 },
 
-"tabs-custom#clothing-technology": {
+"flex-layout.row#row-tabs": {
+  "children": [
+    "tab-layout#clothing-technology"
+  ],
+  "props": {
+    "fullWidth": false
+  }
+},
+
+
+"tab-layout#clothing-technology": {
+  "children": [
+    "tab-list#clothing-technology",
+    "tab-content#clothing-technology"
+  ],
+  "props": {
+    "blockClass": "clothing-technology",
+    "defaultActiveTabId": "uv"
+  }
+},
+
+// ----------- LISTA DE TABS -----------
+
+"tab-list#clothing-technology": {
+  "children": [
+    "tab-list.item#uv",
+    "tab-list.item#antibacterial",
+    "tab-list.item#secado",
+    "tab-list.item#soporte",
+    "tab-list.item#entrepierna",
+    "tab-list.item#largos"
+  ],
+  "props": {
+    "blockClass": "row-list-t"
+  }
+},
+
+"tab-list.item#uv": {
+  "props": {
+    "tabId": "uv",
+    "label": "Protección UV",
+    "defaultActiveTab": true,
+    "blockClass": "b--action-primary"
+  }
+},
+"tab-list.item#antibacterial": {
+  "props": {
+    "tabId": "antibacterial",
+    "label": "Antibacterial",
+    "blockClass": "ListItemN"
+  }
+},
+"tab-list.item#secado": {
+  "props": {
+    "tabId": "secado",
+    "label": "Secado Rápido",
+    "blockClass": "ListItemN"
+  }
+},
+"tab-list.item#soporte": {
+  "props": {
+    "tabId": "soporte",
+    "label": "Tipos de Soporte",
+    "blockClass": "ListItemN"
+  }
+},
+"tab-list.item#entrepierna": {
+  "props": {
+    "tabId": "entrepierna",
+    "label": "Tipos de Entrepierna",
+    "blockClass": "ListItemN"
+  }
+},
+"tab-list.item#largos": {
+  "props": {
+    "tabId": "largos",
+    "label": "Tipos de Largos",
+    "blockClass": "ListItemN"
+  }
+},
+
+// ----------- CONTENIDO -----------
+
+"tab-content#clothing-technology": {
+  "children": [
+    "tab-content.item#uv",
+    "tab-content.item#antibacterial",
+    "tab-content.item#secado",
+    "tab-content.item#soporte",
+    "tab-content.item#entrepierna",
+    "tab-content.item#largos"
+  ]
+},
+
+"tab-content.item#uv": {
+  "children": ["video#uv-video"],
+  "props": { "tabId": "uv" }
+},
+"video#uv-video": {
+  "props": {
+    "src": "https://digitalepartner.com/pruebas/HIGH_UV_COMPRESS.mp4",
+    "width": "100%",
+    "height": 400,
+    "autoPlay": true,
+    "loop": true,
+    "muted": true,
+    "controls": false
+  }
+},
+
+"tab-content.item#antibacterial": {
+  "children": ["video#antibacterial-video"],
+  "props": { "tabId": "antibacterial" }
+},
+"video#antibacterial-video": {
+  "props": {
+    "src": "https://digitalepartner.com/pruebas/RACKET3_HIGH_BACTERIAS.mp4",
+    "width": "100%",
+    "height": 400,
+    "autoPlay": true,
+    "loop": true,
+    "muted": true,
+    "controls": false
+  }
+},
+
+"tab-content.item#secado": {
+  "children": ["video#secado-video"],
+  "props": { "tabId": "secado" }
+},
+"video#secado-video": {
+  "props": {
+    "src": "https://digitalepartner.com/pruebas/HIGH_SECADO.mp4",
+    "width": "100%",
+    "height": 400,
+    "autoPlay": true,
+    "loop": true,
+    "muted": true,
+    "controls": false
+  }
+},
+
+"tab-content.item#soporte": {
+  "children": ["image#soporte-img"],
+  "props": { "tabId": "soporte" }
+},
+"image#soporte-img": {
+  "props": {
+    "src": "https://epartner.vtexassets.com/assets/vtex.file-manager-graphql/images/de72f892-8a6e-421a-a478-a9e32ac273e4___af4fba68aa386c14cf8528d78c55767a.png",
+    "maxWidth": "100%"
+  }
+},
+
+"tab-content.item#entrepierna": {
+  "children": ["image#entrepierna-img"],
+  "props": { "tabId": "entrepierna" }
+},
+"image#entrepierna-img": {
+  "props": {
+    "src": "https://epartner.vtexassets.com/assets/vtex.file-manager-graphql/images/af1a654d-57a3-466b-be28-afdfc575e9e8___dc4dc8882fdaa18ddd1ecc4a9d54ccab.png",
+    "maxWidth": "100%"
+  }
+},
+
+"tab-content.item#largos": {
+  "children": ["image#largos-img"],
+  "props": { "tabId": "largos" }
+},
+"image#largos-img": {
+  "props": {
+    "src": "https://epartner.vtexassets.com/assets/vtex.file-manager-graphql/images/f8c35608-eab6-43a4-8fa4-e1bcbb110d01___e39c4cc70fdc581fd969c7a181992f6d.png",
+    "maxWidth": "100%"
+  }
+},
+
+
+// ----- Galería REACT-------
+  "flex-layout.row#gallery-row": {
+    "children": [
+      "gallery#home"
+    ],
     "props": {
-      "tabs": [
+      "fullWidth": false,
+      "marginBottom": 8
+    }
+  },
+  "gallery#home": {
+    "props": {
+      "images": [
         {
-          "id": "proteccion-uv",
-          "label": "Protección UV",
-          "content": "image#uv-protection-content"
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/b3d7b6d7-2216-492a-aa77-a80bdcc48a6d___427e131b2ac97867c5c4dcba84a3582a.png"
         },
         {
-          "id": "antibacterial",
-          "label": "Antibacterial",
-          "content": "rich-text#antibacterial-content"
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/102fcdc1-819e-46a5-8a71-2b0846cab9a3___ea261d0570f51213ad46e2a19bb49039.png"
         },
         {
-          "id": "secado",
-          "label": "Secado Rápido",
-          "content": "rich-text#antibacterial-content"
-        },
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/a1b661e7-727f-43df-9b12-70725217e8d9___0ce31c42e7701f79d4f291871168e12b.png"
+        }
+        ,
         {
-          "id": "soporte",
-          "label": "Tipos de soporte",
-          "content": "rich-text#antibacterial-content"
-        },
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/9770c074-8ac0-45c0-ad01-d3a59fdb345a___ac988177d738a2fedb44c329da674091.png"
+        }
+        ,
         {
-          "id": "entrepierna",
-          "label": "Tipos de entrepierna",
-          "content": "rich-text#antibacterial-content"
-        },
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/328d0ff7-7ed9-4dab-b85f-78d78420f998___7205efbadef8fde9f8ee98f81c298c52.png"
+        }
+        ,
         {
-          "id": "largos",
-          "label": "Tipos de largos",
-          "content": "rich-text#antibacterial-content"
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/6b197055-8217-471b-9f1e-11332d1d36c3___b78d472b6c2345b5a360e42ba8b3ff95.png"
+        }
+        ,
+        {
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/e964bdaa-9583-4c3e-8c77-5b5c91efb6f0___f7472ea670b1459ca83aa02499992ccb.png"
+        }
+        ,
+        {
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/dad120bb-9af2-4991-a71d-71e31bc77d5f___9d025b1d924f644a3b4f21cfb4a693b9.png"
+        }
+        ,
+        {
+          "src": "https://racketball.vtexassets.com/assets/vtex.file-manager-graphql/images/5fc476e1-900e-45a6-bf5e-721c0d89f3ff___801b8e09e3a48f6d1044c16fbcdec1fa.png"
         }
       ]
-    }
-  },
-
-  "image#uv-protection-content": {
-    "props": {
-      "src": "https://testracket.vtexassets.com/arquivos/OutWear.jpg"
-    }
-  },
-
-  "rich-text#antibacterial-content": {
-    "props": {
-      "text": "Contenido de la pestaña de Antibacterial"
     }
   }
 

@@ -1,0 +1,14 @@
+
+.container--clothing-technology {
+  border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0 0 50px 0;
+}
+
+.listContainer--row-list-t {
+    justify-content: flex-start;
+}
